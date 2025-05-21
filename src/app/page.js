@@ -1,4 +1,7 @@
+import IntroSection from "@/components/IntroSection";
 import Navbar from "@/components/Navbar";
+import ProductOverview from "@/components/ProductOverview";
+import TrustedByTeams from "@/components/TrustedByTeams";
 import Image from "next/image";
 
 export default function Home() {
@@ -6,6 +9,9 @@ export default function Home() {
     <div>
       <main >
      <Navbar/>
+     <IntroSection />
+      <TrustedByTeams />
+      <ProductOverview />
       </main>
     </div>
   );

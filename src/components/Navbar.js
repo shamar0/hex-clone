@@ -61,7 +61,6 @@ export default function Navbar() {
         <CenterElement>
           <DropdownWrapper
           onMouseEnter={() => setOpenDropdown("product")} 
-          // onMouseLeave={() => setOpenDropdown(null)}
           >
           <StyledButton
           onClick={() => setOpenDropdown(openDropdown === 'product' ? null : 'product')}

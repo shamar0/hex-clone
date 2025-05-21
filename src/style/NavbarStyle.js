@@ -1,5 +1,7 @@
+'use client';
 import styled, { css } from 'styled-components';
 import Button from '@mui/material/Button';
+
 
 export const DropdownWrapper = styled.div`
   position: relative;
@@ -124,3 +126,93 @@ export const ArrowIconWrapper = styled('div').withConfig({
       transform: rotate(180deg);
     `}
 `;
+
+export const IntroContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    max-width: 1240px;
+    padding: 0px 32px;
+    gap: 56px;
+    margin: 0px auto;
+    z-index: 1;
+    position: relative;
+`;
+
+export const HeadingDiv = styled.div`
+    display: flex;
+    align-items: center;
+    gap: 102px;
+    margin: 0px auto;
+    max-width: 880px;
+    h1 {
+    margin: 0px;
+    font-family: "PP Formula SemiExtended", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    font-size: 74px;
+    line-height: 1.3;
+    letter-spacing: -0.025em;
+    background-color: rgb(255, 255, 255);
+    background-size: 100%;
+    background-repeat: repeat;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(55deg, rgb(255, 255, 255) 20%, rgba(245, 192, 192, 0.8) 100%);
+   }
+`;
+
+export const MainHeading = styled.h1`
+  margin: 0px;
+    font-family: "PP Formula SemiExtended", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    font-size: 74px;
+    line-height: 1.3;
+    letter-spacing: -0.025em;
+    background-color: rgb(255, 255, 255);
+    background-size: 100%;
+    background-repeat: repeat;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(55deg, rgb(255, 255, 255) 20%, rgba(245, 192, 192, 0.8) 100%);
+`;
+
+    
+    export const RightHeadingDiv = styled.div`
+     display: flex;
+     flex-direction: column;
+     gap: 30px;
+     p {
+      margin: 0px;
+      font-size: 24px;
+      line-height: 34px;
+      color: rgb(245, 192, 192);
+      font-weight: 300;
+     }
+    `;
+
+    export const ActionDiv = styled.div`
+     display: flex;
+     gap: 20px;
+    `;
+
+    export const Anchor = styled.a`
+    position: relative;
+    flex: 0 0 auto;
+    display: flex;
+    height: 48px;
+    outline: none;
+    padding: 0px 20px;
+    user-select: none;
+    cursor: pointer;
+    font-size: 14px;
+    color: rgb(245, 192, 192);
+    min-width: 0px;
+    transition: background-color 0.25s cubic-bezier(0.25, 0.1, 0.25, 1), border-color 0.25s cubic-bezier(0.25, 0.1, 0.25, 1);
+    border: 1px solid transparent;
+    background: linear-gradient(to right, rgb(20, 20, 28), rgb(20, 20, 28)) padding-box padding-box, linear-gradient(45deg, rgb(245, 192, 192), rgb(173, 142, 182)) border-box border-box;
+    align-items: center;
+    text-decoration: none;
+    `;
+    
+    
