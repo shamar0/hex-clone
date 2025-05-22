@@ -1,64 +1,124 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button } from '@mui/material';
 import Product from '../../public/Icons/Product';
 import Arrow from '../../public/Icons/Arrow';
-import { ArrowIconWrapper, CenterElement, Dropdown, DropdownWrapper, StyledButton } from '@/style/NavbarStyle';
+import { ArrowIconWrapper, CenterElement, Dropdown, DropdownWrapper, HamburgerButton, NavbarMob, StyledButton } from '@/style/NavbarStyle';
 import UseCases from '../../public/Icons/UseCases';
 import Enterprise from '../../public/Icons/Enterprise';
 import Resources from '../../public/Icons/Resources';
 import Pricing from '../../public/Icons/Pricing';
 import Hex from '../../public/Icons/Hex';
 import DropdownContent from './DropDownContent';
+import Hamburger from '../../public/Icons/Hamburger';
+import MenuItemsList from './MenuItemsList';
+import CloseIcon from '../../public/Icons/CloseIcon';
+import { isMobile } from 'react-device-detect';
 
 export default function Navbar() {
   const [openDropdown, setOpenDropdown] = useState("product"); 
+  const [menuItem, setMenuItem] = useState(false);
+
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const productItems = [
     {
-    title: "dfn",
-    content:"nbfmnf",
+      heading: "Notebooks",
+      content: "Analyze, model, and explore, like never before"
     },
     {
-    title: "abc",
-    content:"mndb",
-    },
-     {
-    title: "dfn",
-    content:"nbfmnf",
+      heading: "Explore",
+      content: "Powerful exploration tools in a friendly, no-code UI"
     },
     {
-    title: "abc",
-    content:"mndb",
-    },
-     {
-    title: "dfn",
-    content:"nbfmnf",
+      heading: "Magic AI",
+      content: "Smarter, faster analysis"
     },
     {
-    title: "abc",
-    content:"mndb",
+      heading: "Embedded analytics",
+      content: "Seamlessly embed data experiences for your customers"
+    },
+    {
+      heading: "Collaboration and sharing",
+      content: "Bring everyone together in one collaborative workspace"
+    },
+    {
+      heading: "App Builder",
+      content: "Build and share insights with beautiful visualizations"
+    },
+    {
+      heading: "Integrations",
+      content: "Connect to anything"
     }
   ];
 
   const useCasesItems = [
     {
-    title: "dfn",
-    content:"nbfmnf",
-    },
+heading: "Exploratory analysis",
+content: "The most powerful tools for exploration available."
+},
+{
+heading: "Data science",
+content: "The first platform actually designed for data scientists."
+},
+{
+heading: "Operational reporting",
+content: "Interactive, intuitive reporting without crazy workarounds."
+},
+{
+heading: "Self-serve",
+content: "Data tools for stakeholders and decision-makers."
+}
+  ];
+
+  const resourcesItems = [
     {
-    title: "abc",
-    content:"mndb",
-    },
-     {
-    title: "dfn",
-    content:"nbfmnf",
-    }
+heading: "Templates",
+content: "Jumpstart with pre-built"
+},
+{
+heading: "Hex Foundations",
+content: "Video series"
+},
+{
+heading: "Docs",
+content: "Resources and product guides"
+},
+{
+heading: "Changelog",
+content: "Product updates"
+},
+{
+heading: "Blog",
+content: "From data teams to data teams"
+},
+{
+heading: "Resources & Events",
+content: "Learn and connect with peers"
+},
+{
+heading: "Customer stories",
+content: "Empowering the best data teams"
+},
+{
+heading: "Partners",
+content: "Learn more about our partnerships"
+}
   ];
 
 
   return (
     <>
-        <CenterElement>
+        <CenterElement className={isScrolled && "scrolled"}>
           <DropdownWrapper
           onMouseEnter={() => setOpenDropdown("product")} 
           >
@@ -98,11 +158,18 @@ export default function Navbar() {
             <StyledButton>
             <Hex />
             </StyledButton>
+           
+           <DropdownWrapper
+          onMouseEnter={() => setOpenDropdown("resources")} 
+          onMouseLeave={() => setOpenDropdown(null)}
+          >
           <StyledButton>
             <Resources />
             Resources
             <Arrow />
             </StyledButton>
+            {openDropdown === 'resources' && <DropdownContent items={resourcesItems}/>}
+            </DropdownWrapper>
           <StyledButton color="inherit">
             <Pricing />
             Pricing</StyledButton>
@@ -114,6 +181,16 @@ export default function Navbar() {
             Get Started
           </Button>
         </CenterElement>
+
+        {isMobile && (
+          <NavbarMob className={menuItem && "scrolled"}>
+          <Hex />
+          <HamburgerButton onClick={()=> setMenuItem(prev => !prev)}>
+            {menuItem ? <CloseIcon /> :  <Hamburger />  }
+          </HamburgerButton>
+          </NavbarMob>
+        )}
+        {menuItem && <MenuItemsList/>}
     </>
   );
 }

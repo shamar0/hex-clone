@@ -3,34 +3,50 @@ import { FirstInner, FirstLeft, FirstRight, ImageWrapper, Img, InnerHeading, Out
 import { Fira_Sans } from "next/font/google";
 import Image from "next/image";
 import React from "react";
+import Workspace from "../../public/Icons/WorkSpace";
+import { isMobile } from 'react-device-detect';
 
 export default function ProductOverview() {
     return (
         <OuterDiv>
            <WorflowHeadingDiv className="workspace">
             <MainHeading>
-                <span> All your workflows,</span>
+              {isMobile ? (
+                <>
+                <span> All your</span>
+                <br/>
+                 <span>workflows, in</span>
+                 <br/>
+                <span>one workspace</span>
+                 </>
+              ) : (
+                <>
+                 <span> All your workflows,</span>
                 <br/>
                 <span>in one workspace</span>
+                </>
+              )}
+               
             </MainHeading>
           </WorflowHeadingDiv>
 
           <InnerHeading>
              <FirstInner>
                 <FirstLeft>
+                  <Workspace />
                   <h2>Data exploration superpowers</h2>
                   <p>SQL, Python, R, pivots, spreadsheets, charts, all together, all in a modular, notebook-based canvas.</p>
                   <ActionDiv>
                                 <Anchor href="/">
                                 <div>
-                                   Get started for free
+                                   Explore Notebooks
                                 </div>
                                 </Anchor>
-                                <Anchor href="/">
+                                {/* <Anchor href="/">
                                 <div>
                                   Request a demo
                                 </div>
-                                </Anchor>
+                                </Anchor> */}
                               </ActionDiv> 
                </FirstLeft>
                <FirstRight>

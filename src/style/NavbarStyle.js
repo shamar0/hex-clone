@@ -20,6 +20,10 @@ export const StyledButton = styled(Button)`
   &.login-btn {
    color: rgb(227, 178, 179) !important; 
   }
+  &:hover {
+    background-color: rgba(227, 178, 179,0.2);
+   }
+
 `;
 
 export const CenterElement = styled.div`
@@ -29,6 +33,20 @@ export const CenterElement = styled.div`
     align-items: center;
     padding: 12px 0;
     gap: 16px;
+    position: sticky !important;
+    top: 0;
+    background: #181820;
+    z-index: 2;
+    
+    &.scrolled {
+     border-bottom: 1px solid rgb(227, 178, 179);
+     box-shadow: 0 10px 6px -1px rgba(227, 178, 179, 0.3);
+    }
+
+   @media (max-width: 1024px) {
+     display: none;
+    }
+
 `;
 
 // export const Dropdown = styled.div`
@@ -85,23 +103,34 @@ export const Dropdown = styled.div.withConfig({
   position: absolute;
   top: 100%;
   left: 0;
-  width: ${({ itemCount }) => (itemCount > 4 ? '440px' : '220px')};
-  background-color: rgba(50, 49, 49, 0.6);
+  width: ${({ itemCount }) => (itemCount > 4 ? '480px' : '220px')};
+  background-color: rgba(0, 0, 0, 0.95);
   color: white;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   z-index: 1000;
-  padding: 16px;
+  padding: 14px;
   border-radius: 8px;
   columns: ${({ itemCount }) => (itemCount > 4 ? 2 : 1)};
   column-gap: 0;
   border: 0.5px solid rgb(227, 178, 179);
   border-radius: 4px;
+  // column-gap: 25px;
 `;
 
 export const DropdownItem = styled.div`
   break-inside: avoid;
-  margin-bottom: 8px;
-  width: 100%;
+  // margin-bottom: 14px;
+  width: 90%;
+  padding: 14px;
+  &:hover {
+    background-color: rgba(0, 0, 360,0.5);
+     background-color: rgba(360, 360, 360,0.1);
+   }
+  span {
+   color: rgb(227, 178, 179);
+   font-size: 14px;
+   font-family: cursive;
+  }
 `;
 
 
@@ -131,11 +160,31 @@ export const IntroContainer = styled.div`
     display: flex;
     flex-direction: column;
     max-width: 1240px;
-    padding: 0px 32px;
+    padding: 32px;
     gap: 56px;
     margin: 0px auto;
     z-index: 1;
     position: relative;
+    background-color: #181820;
+
+    &:after {
+     z-index: 0;
+    pointer-events: none;
+    content: "";
+    display: block;
+    position: absolute;
+    inset: 0px 0px -20px;
+    background-image: linear-gradient(rgba(245, 192, 192, 0.15) 1px, transparent 1px), linear-gradient(to right, rgba(245, 192, 192, 0.15) 1px, transparent 1px);
+    background-size: 32px 32px;
+    background-position: center top;
+    mask: linear-gradient(transparent 0%, white 50%, white 85%, transparent 100%);
+    }
+
+    @media (max-width : 768px) { 
+     gap: 56px;
+     padding: 26px 10px 32px;
+    }
+
 `;
 
 export const HeadingDiv = styled.div`
@@ -143,21 +192,26 @@ export const HeadingDiv = styled.div`
     align-items: center;
     gap: 102px;
     margin: 0px auto;
-    max-width: 880px;
-    h1 {
-    margin: 0px;
-    font-family: "PP Formula SemiExtended", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    color: rgb(255, 255, 255);
-    font-weight: 700;
-    font-size: 74px;
-    line-height: 1.3;
-    letter-spacing: -0.025em;
-    background-color: rgb(255, 255, 255);
-    background-size: 100%;
-    background-repeat: repeat;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-image: linear-gradient(55deg, rgb(255, 255, 255) 20%, rgba(245, 192, 192, 0.8) 100%);
+    max-width: 1024px;
+  //   h1 {
+  //   margin: 0px;
+  //   font-family: "PP Formula SemiExtended", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  //   color: rgb(255, 255, 255);
+  //   font-weight: 700;
+  //   font-size: 74px;
+  //   line-height: 1.3;
+  //   letter-spacing: -0.025em;
+  //   background-color: rgb(255, 255, 255);
+  //   background-size: 100%;
+  //   background-repeat: repeat;
+  //   background-clip: text;
+  //   -webkit-text-fill-color: transparent;
+  //   background-image: linear-gradient(55deg, rgb(255, 255, 255) 20%, rgba(245, 192, 192, 0.8) 100%);
+  //  }
+   
+   @media (max-width : 768px) {
+     flex-direction: column;
+     gap: 26px;
    }
 `;
 
@@ -175,6 +229,10 @@ export const MainHeading = styled.h1`
     background-clip: text;
     -webkit-text-fill-color: transparent;
     background-image: linear-gradient(55deg, rgb(255, 255, 255) 20%, rgba(245, 192, 192, 0.8) 100%);
+     @media (max-width : 768px) {
+       font-size: 44px;
+      line-height: 1.1;
+     }
 `;
 
     
@@ -188,6 +246,9 @@ export const MainHeading = styled.h1`
       line-height: 34px;
       color: rgb(245, 192, 192);
       font-weight: 300;
+     }
+     @media (max-width: 768px) {
+      font-size: 20px;
      }
     `;
 
@@ -214,5 +275,29 @@ export const MainHeading = styled.h1`
     align-items: center;
     text-decoration: none;
     `;
+
+    export const NavbarMob = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8px;
+    min-height: 60px;
+    &.scrolled {
+     border-bottom: 1px solid rgb(227, 178, 179);
+     box-shadow: 0 6px 6px -1px rgba(227, 178, 179, 0.3);
+    }
+
+    `;
+
+    export const HamburgerButton = styled(Button)`
+    max-width: 40px;
+    max-height: 40px;
+    padding: 0;
+    margin: 0;
+    min-width: 40px;
+    border: none;
+    border-radius: 100%;
+    `;
+    
     
     

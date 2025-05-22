@@ -1,12 +1,13 @@
 import React from "react";
 
-const Arrow = () => (
+const Arrow = ({rotate = false}) => (
   <svg
     width="9"
     height="5"
     viewBox="0 0 9 5"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    style={rotate ? {transform: 'rotate(-90deg)'} : {}}
   >
     <path
       fillRule="evenodd"

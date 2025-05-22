@@ -10,8 +10,9 @@ import IconButton from '@mui/material/IconButton';
 const Container = styled(Box)`
   position: relative;
   width: 100%;
-  max-width: 900px;
+  max-width: 1024px;
   margin: 0 auto;
+  z-index: inherit;
 `;
 
 const StyledVideo = styled.video`
@@ -30,6 +31,11 @@ const OverlayButton = styled(Button)`
   padding: 12px 24px;
   font-size: 1rem;
   z-index: 2;
+  border: 1px solid rgba(245, 192, 192, 0.25);
+  @media (max-width: 768px){
+    padding: 8px;
+    font-size: 10px;
+  }
 `;
 
 const ModalContent = styled(Box)`
@@ -37,7 +43,7 @@ const ModalContent = styled(Box)`
   width: 90vw;
   max-width: 1000px;
   background: #000;
-  border-radius: 12px;
+  border-radius: 0px;
   outline: none;
   padding: 16px;
 `;

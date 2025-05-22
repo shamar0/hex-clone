@@ -28,7 +28,7 @@ import StyledComponentsRegistry from "@/lib/registry";
 export default function RootLayout({ children }) {
   return (
     <html>
-      <body style={{backgroundColor: "black"}}>
+      <body style={{backgroundColor: "#181820"}}>
         <StyledComponentsRegistry>
             {children}
           </StyledComponentsRegistry>
