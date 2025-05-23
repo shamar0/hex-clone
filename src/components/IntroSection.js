@@ -13,7 +13,6 @@ import VideoPopup from "./VideoPopup";
 export default function IntroSection() {
   return (
     <IntroContainer>
-      {/* text div */}
       <HeadingDiv>
         <div>
           <MainHeading>Bring everyone together with data</MainHeading>

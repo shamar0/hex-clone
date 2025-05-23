@@ -44,7 +44,7 @@ export default function Footer() {
           <Item>
             <FooterItem>
               <Hex />
-              <p> made with {emoji} on 🌍</p>
+              <p> Made with {emoji} on 🌍</p>
             </FooterItem>
           </Item>
         </Grid>

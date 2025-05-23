@@ -28,6 +28,10 @@ export const FooterItem = styled.div`
   align-items: flex-start;
   gap: 15px;
   background: #181820;
+  p {
+   color: rgba(227, 178, 179, 0.65);
+   font-weight: 700;
+  }
   @media (max-width: 768px) {
     align-items: center;
   }

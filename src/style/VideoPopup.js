@@ -34,7 +34,6 @@ export const OverlayButton = styled(Button)`
 `;
 
 export const ModalContent = styled(Box)`
-  position: relative;
   width: 90vw;
   max-width: 1000px;
   border-radius: 0px;
@@ -44,9 +43,38 @@ export const ModalContent = styled(Box)`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 5px;
 `;
 
 export const StyledDiv = styled.div`
   position: relative;
   height: 100vh;
+`;
+export const IconButton = styled.button`
+  cursor: pointer;
+  height: 55px;
+  width: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 11px;
+  align-self: flex-end;
+  border: 1px solid rgba(245, 192, 192, 0.35);
+  svg {
+    fill: #fff;
+    height: 40px;
+    width: 40px;
+  }
+  @media (max-width: 768px) {
+    height: 34px;
+    width: 34px;
+    svg {
+      height: 20px;
+      width: 20px;
+    }
+  }
 `;
