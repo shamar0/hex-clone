@@ -1,7 +1,7 @@
 'use client'
 import { FirstLeft, ImageDiv, MovableImg, OuterDivSection } from "@/style/ProductOverview";
 import React from "react";
-import Workspace from "../../public/Icons/WorkSpace";
+import Workspace from "../../public/Icons/Workspace";
 import { ActionDiv, Anchor } from "@/style/NavbarStyle";
 import { isMobile } from 'react-device-detect';
 
@@ -32,17 +32,17 @@ export default function ProductOverviewSection() {
     </OuterDivSection>
 
     <OuterDivSection className="cohort-section">
-        <FirstLeft>
+       <div>
+       
+        <FirstLeft className="cohort">
              <Workspace />
-        <h2>Teamwork, that works for team</h2>
+        <h2>Interactive apps and reporting</h2>
         <p>
-          Get feedback from peers, align with stakeholders, review diff views,
-          endorse trusted data, and build from reusable components — all in the
-          same place.
+          Publish your work into beautiful reports, data apps, and dashboards with a drag-and-drop UI builder.
         </p>
         <ActionDiv>
           <Anchor href="/">
-            <div>Explore collaboration</div>
+            <div>Explore App Builder</div>
           </Anchor>
         </ActionDiv>
         </FirstLeft>
@@ -54,6 +54,7 @@ export default function ProductOverviewSection() {
         ></img>
       </ImageDiv>
       <MovableImg src="https://hex.tech/static/5f291fc12b45d2abf6cbe0c1876f363a/b4457/actionable-apps-drag%402x.avif" alt="img" />
+      </div>
     </OuterDivSection>
     </>
   );

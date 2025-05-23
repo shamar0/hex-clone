@@ -7,9 +7,16 @@ export const OuterDiv = styled.div`
     flex-direction: column;
     width: 100%;
     position: relative;
-    padding: 100px 0px;
+    padding: 170px 80px 0px;
+    width: 85%;
+    margin: 0px auto;
+    border-left: 1px solid rgba(227, 178, 179, 0.35);
+    border-right: 1px solid rgba(227, 178, 179, 0.35);
+    max-width: 85%;
     @media (max-width:768px) {
-      padding: 80px 0px;
+      padding: 50px 10px;
+      width: 94%;
+      max-width: 94%;
     }
 `;
 
@@ -20,6 +27,10 @@ export const WorflowHeadingDiv = styled.div`
     width: 100%;
     border-top: 1px dashed rgba(245, 192, 192, 0.4);
     border-bottom: 1px dashed rgba(245, 192, 192, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 50px;
     @media (max-width:768px) {
      text-align: center;
      h1 {
@@ -34,12 +45,14 @@ export const InnerHeading = styled.div`
     align-items: center;
     max-width: 1024px;
     margin: 0 auto;
+    margin-top: 100px;
     padding-top: 80px;
     @media (min-width: 1024px){
       min-width: 1024px;
     }
     @media (max-width: 768px) {
       padding-top: 68px;
+      width: 100%;
     }
 `;
 
@@ -74,13 +87,17 @@ export const FirstInner = styled.div`
     }
     &.product-section {
     position: absolute;
-    bottom: 63px;
-    right: -50px;
+    bottom: 153px;
+    right: 110px;
     max-width: 310px;
     }   
     @media (max-width:768px) {
      h1 {
       font-size: 30px;
+     }
+      margin-top: 140px;
+     &.mob-first-left, &.cohort {
+      margin-top: 50px;
      }
     }
  `;
@@ -132,28 +149,48 @@ width: 600px !important;
 
 export const OuterDivSection = styled.div`
     display: flex;
-    padding: 18px 32px;
     position: relative;
-    max-width: 1024px;
-    margin: 0 auto;
+    padding: 100px 80px 0;
+    width: 85%;
+    margin: 0px auto;
+    border-left: 1px solid rgba(227, 178, 179, 0.35);
+    border-right: 1px solid rgba(227, 178, 179, 0.35);
+    max-width: 85%;
     &.mob-section {
      flex-direction: column-reverse;
     }
     &.cohort-section {
       gap: 12px;
-      padding: 80px 32px;
+      padding: 100px 80px 170px;
+      @media (min-width: 1024px){
+       & > div:first-of-type {
+       max-width: 1024px;
+       display: flex;
+       gap:12px;
+       margin: 0 auto;
+      }
+      }
     }
     @media (max-width : 768px) { 
+       width: 94%;
+      max-width: 94%;
        padding: 18px 10px;
        &.cohort-section {
         flex-direction: column;
-        padding: 80px 0px;
+        padding: 18px 10px 100px;
+        gap:12px;
+       & > div:first-of-type {
+         gap: 30px;
+    display: flex;
+    flex-direction: column;
+        }
        }
     }
 `;
 
 export const ImageDiv = styled.div`
    margin: 0 auto;
+   max-width: 1024px;
    img {
     width: 100%;
    }
@@ -184,18 +221,18 @@ export const MovableImg = styled.img`
     width: 300px;
     object-fit: contain;
     bottom: 0;
-    left: 25%;
+    left: 33%;
     margin: 0;
     max-width: none;
     padding: 0;
     position: absolute;
     right: 0;
-    top: 60%;
+    top: 58%;
     animation: ${moveImage} 5s ease-in-out infinite;
     @media (max-width: 768px) {
       width: 150px;
-      left: -1%;
-      top: 67%;
+      left: 1%;
+      top: 64%;
     }
 `;
 

@@ -32,10 +32,20 @@ export const StyledGrid = styled(Grid)`
 `;
 
 export const StyledBox = styled(Box)`
-   max-width: 1024px;
-   margin: 0 auto;
-   padding-top: 32px;
+    padding: 50px 80px;
+    width: 85%;
+    margin: 0px auto;
+    border-left: 1px solid rgba(227, 178, 179, 0.35);
+    border-right: 1px solid rgba(227, 178, 179, 0.35);
+    max-width: 85%;
+    & > div:first-of-type {
+    max-width: 1024px;
+    margin: 0 auto;
+    }
    @media (max-width: 768px){
+     padding: 50px 10px;
+     width: 94%;
+    max-width: 94%;
      & .desktop-grid {
        display: none;
      }

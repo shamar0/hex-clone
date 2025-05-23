@@ -1,3 +1,4 @@
+import Footer from "@/components/footer";
 import IntroSection from "@/components/IntroSection";
 import Navbar from "@/components/Navbar";
 import ProductOverview from "@/components/ProductOverview";
@@ -16,6 +17,7 @@ export default function Home() {
       <ProductOverview />
       {/* <RetentionTrendChart /> */}
       <ProductOverviewSection />
+      <Footer/>
       </main>
     </div>
   );

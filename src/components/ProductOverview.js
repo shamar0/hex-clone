@@ -1,10 +1,12 @@
+'use client'
+
 import { ActionDiv, Anchor, HeadingDiv, MainHeading } from "@/style/NavbarStyle";
 import { FirstInner, FirstLeft, FirstRight, ImageWrapper, Img, InnerHeading, OuterDiv, WorflowHeadingDiv } from "@/style/ProductOverview";
 import { Fira_Sans } from "next/font/google";
 import Image from "next/image";
 import React from "react";
-import Workspace from "../../public/Icons/WorkSpace";
 import { isMobile } from 'react-device-detect';
+import Workspace from "../../public/Icons/Workspace";
 
 export default function ProductOverview() {
     return (

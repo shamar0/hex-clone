@@ -18,8 +18,9 @@ export default function MenuItemsList() {
     };
   }, []);
 
+
   return (
-    <MenuItem>
+    <MenuItem id="menu-item">
       <MenuItemUl>
         <li>
           <TitleDiv>Product</TitleDiv>

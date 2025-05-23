@@ -37,65 +37,36 @@ export const CenterElement = styled.div`
     top: 0;
     background: #181820;
     z-index: 2;
+    width: 85%;
+    margin: 0px auto;
+    border-left: 1px solid rgba(227, 178, 179, 0.35);
+    border-right: 1px solid rgba(227, 178, 179, 0.35);
+    max-width: 85%;
+    padding: 0px 80px;
+    border-top: 1px solid rgba(227, 178, 179, 0.35);
     
     &.scrolled {
+     top: 10px;
+     border-top: 1px solid rgba(227, 178, 179, 0.35);
      border-bottom: 1px solid rgb(227, 178, 179);
-     box-shadow: 0 10px 6px -1px rgba(227, 178, 179, 0.3);
+     box-shadow: 0 6px 6px -1px rgba(227, 178, 179, 0.25);
     }
+    &.scrolled::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: #181820;
+  z-index: 999;
+}
 
    @media (max-width: 1024px) {
      display: none;
     }
-
 `;
 
-// export const Dropdown = styled.div`
-//   position: absolute;
-//   top: 100%; /* positions it just below the button */
-//   left: 0;
-//   width: 300px;
-//   height: 200px;
-//   background-color: white;
-//   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-//   z-index: 1000;
-//   padding: 16px;
-//   border-radius: 8px;
-// `;
-
-// export const Dropdown = styled.div`
-//   position: absolute;
-//   top: 100%;
-//   left: 0;
-//   width: 600px; /* Adjust width as needed */
-//   background: white;
-//   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-//   z-index: 1000;
-//   padding: 24px;
-//   border-radius: 12px;
-//   display: flex;
-//   flex-wrap: wrap;
-//   gap: 24px; /* Space between items */
-//   min-width: 220px;
-//   max-width: 220px;
-// `;
-
-// export const Dropdown = styled.div.withConfig({
-//   shouldForwardProp: (prop) => prop !== 'itemCount',
-// })`
-//   position: absolute;
-//   top: 100%;
-//   left: 0;
-//   width: ${({ itemCount }) => (itemCount > 4 ? '440px' : '220px')};
-//   background: #fff;
-//   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-//   z-index: 1000;
-//   padding: 16px;
-//   border-radius: 8px;
-//   display: flex;
-//   flex-wrap: wrap;
-//   flex-direction: column;
-//   gap: 16px;
-// `;
 
 export const Dropdown = styled.div.withConfig({
   shouldForwardProp: (prop) => prop !== 'itemCount',
@@ -134,16 +105,6 @@ export const DropdownItem = styled.div`
 `;
 
 
-// export const DropdownItem = styled.div`
-//   min-width: 220px;
-//   max-width: 220px;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: flex-start;
-//   margin-bottom: 12px;
-// `;
-
-
 export const ArrowIconWrapper = styled('div').withConfig({
   shouldForwardProp: (prop) => prop !== 'isOpen',
 })`
@@ -159,13 +120,19 @@ export const ArrowIconWrapper = styled('div').withConfig({
 export const IntroContainer = styled.div`
     display: flex;
     flex-direction: column;
-    max-width: 1240px;
-    padding: 32px;
+    // max-width: 1240px;
+    // padding: 32px;
     gap: 56px;
-    margin: 0px auto;
+    // margin: 0px auto;
     z-index: 1;
     position: relative;
     background-color: #181820;
+    padding: 20px 80px 50px;
+    width: 85%;
+    margin: 0px auto;
+    border-left: 1px solid rgba(227, 178, 179, 0.35);
+    border-right: 1px solid rgba(227, 178, 179, 0.35);
+    max-width: 85%;
 
     &:after {
      z-index: 0;
@@ -183,6 +150,8 @@ export const IntroContainer = styled.div`
     @media (max-width : 768px) { 
      gap: 56px;
      padding: 26px 10px 32px;
+     width: 94%;
+     max-width: 94%;
     }
 
 `;
@@ -277,15 +246,37 @@ export const MainHeading = styled.h1`
     `;
 
     export const NavbarMob = styled.div`
+    position: sticky !important;
+    background: #181820;
+    top: 0;
+    z-index: 2;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 8px;
     min-height: 60px;
+    padding: 0 10px;
+    margin: 0 auto;
+    border-left: 1px solid rgba(227, 178, 179, 0.35);
+    border-right: 1px solid rgba(227, 178, 179, 0.35);
+    width: 94%;
+    max-width: 94%;
+    border-top: 1px solid rgba(227, 178, 179, 0.35);
     &.scrolled {
-     border-bottom: 1px solid rgb(227, 178, 179);
-     box-shadow: 0 6px 6px -1px rgba(227, 178, 179, 0.3);
+     top: 10px;
+     border-top: 1px solid rgba(227, 178, 179, 0.35);
+     border-bottom: 1px solid rgba(227, 178, 179, 0.35);
+     box-shadow: 0 4px 6px -1px rgba(227, 178, 179, 0.25);
     }
+    &.scrolled::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: #181820;
+  z-index: 999;
+}
 
     `;
 

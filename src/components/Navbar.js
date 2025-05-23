@@ -183,7 +183,7 @@ content: "Learn more about our partnerships"
         </CenterElement>
 
         {isMobile && (
-          <NavbarMob className={menuItem && "scrolled"}>
+          <NavbarMob className={ (isScrolled || menuItem) && "scrolled"}>
           <Hex />
           <HamburgerButton onClick={()=> setMenuItem(prev => !prev)}>
             {menuItem ? <CloseIcon /> :  <Hamburger />  }

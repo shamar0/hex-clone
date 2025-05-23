@@ -3,19 +3,27 @@ import styled from 'styled-components';
 
 export const MenuItem = styled.div`
     position: fixed;
-    top: 70px;
+    top: 73px;
     left: 0;
     background: #181820;
     z-index: 1000;
     width: 100vw;
     height: 100vh;
     overflow: auto;
-
+    height: calc(100vh - 75px);
 `;
 
 export const MenuItemUl = styled.ul`
       padding-inline: 0.6rem;
     padding-bottom: 4rem;
+    border: 1px solid rgba(227, 178, 179, 0.35);
+    border-top: none;
+    padding: 20px 8px;
+    width: 91%;
+    margin: 0 auto;
+    li {
+     list-style: none;
+    }
 `;
 
 export const TitleDiv = styled.div`
@@ -35,6 +43,9 @@ export const MenuItemChildUl = styled.ul`
     padding: 0;
     margin-bottom: 0.5rem;
     padding-bottom: 0.5rem;
+    li {
+      list-style: none;
+    }
 `;
 
 export const StyledAnchor = styled.a`
