@@ -1,20 +1,19 @@
 import { Dropdown, DropdownItem } from "@/style/NavbarStyle";
 import { Grid, Paper } from "@mui/material";
 import React from "react";
-import { styled } from '@mui/material/styles';
+import { styled } from "@mui/material/styles";
 
 const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: '#000',
+  backgroundColor: "#000",
   // border: "1px solid rgb(227, 178, 179)",
-  textAlign: 'left',
-  borderRadius: '0px',
-  color:"#fff"
+  textAlign: "left",
+  borderRadius: "0px",
+  color: "#fff",
 }));
 
-export default function DropdownContent({items}) {
-  
+export default function DropdownContent({ items }) {
   return (
-     <Dropdown itemCount={items.length}>
+    <Dropdown itemCount={items.length}>
       {items?.map((item, idx) => (
         <DropdownItem key={idx}>
           {item?.heading}
@@ -23,7 +22,7 @@ export default function DropdownContent({items}) {
         </DropdownItem>
       ))}
     </Dropdown>
-     
+
     //   <Dropdown itemCount={items.length}>
     //  <Grid container spacing={0}>
     //   {items?.map((item, idx) => (

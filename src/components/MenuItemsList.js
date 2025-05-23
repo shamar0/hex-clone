@@ -10,14 +10,13 @@ import Arrow from "../../public/Icons/Arrow";
 import UseCases from "../../public/Icons/UseCases";
 
 export default function MenuItemsList() {
-    useEffect(() => {
-    document.body.style.overflow = 'hidden';
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
 
     return () => {
-      document.body.style.overflow = 'auto';
+      document.body.style.overflow = "auto";
     };
   }, []);
-
 
   return (
     <MenuItem id="menu-item">
@@ -108,7 +107,7 @@ export default function MenuItemsList() {
         </li>
 
         {/* Use Cases */}
-         <li>
+        <li>
           <TitleDiv>Use Cases</TitleDiv>
           <MenuItemChildUl>
             <li>
@@ -161,7 +160,7 @@ export default function MenuItemsList() {
         </li>
 
         {/* Resources */}
-         <li>
+        <li>
           <TitleDiv>Resources</TitleDiv>
           <MenuItemChildUl>
             <li>
@@ -235,27 +234,27 @@ export default function MenuItemsList() {
           </MenuItemChildUl>
         </li>
         <li>
-              <StyledAnchor>
-                <div>
-                  <UseCases />
-                  Customer stories
-                </div>
-                <span>
-                  <Arrow rotate={true} />
-                </span>
-              </StyledAnchor>
-            </li>
-            <li>
-              <StyledAnchor>
-                <div>
-                  <UseCases />
-                  Partners
-                </div>
-                <span>
-                  <Arrow rotate={true} />
-                </span>
-              </StyledAnchor>
-            </li>
+          <StyledAnchor>
+            <div>
+              <UseCases />
+              Customer stories
+            </div>
+            <span>
+              <Arrow rotate={true} />
+            </span>
+          </StyledAnchor>
+        </li>
+        <li>
+          <StyledAnchor>
+            <div>
+              <UseCases />
+              Partners
+            </div>
+            <span>
+              <Arrow rotate={true} />
+            </span>
+          </StyledAnchor>
+        </li>
       </MenuItemUl>
     </MenuItem>
   );

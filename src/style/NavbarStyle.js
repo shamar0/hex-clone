@@ -48,7 +48,7 @@ export const CenterElement = styled.div`
     &.scrolled {
      top: 10px;
      border-top: 1px solid rgba(227, 178, 179, 0.35);
-     border-bottom: 1px solid rgb(227, 178, 179);
+     border-bottom: 1px solid rgb(227, 178, 179,0.35);
      box-shadow: 0 6px 6px -1px rgba(227, 178, 179, 0.25);
     }
     &.scrolled::before {
@@ -75,7 +75,7 @@ export const Dropdown = styled.div.withConfig({
   top: 100%;
   left: 0;
   width: ${({ itemCount }) => (itemCount > 4 ? '480px' : '220px')};
-  background-color: rgba(0, 0, 0, 0.95);
+  background-color: rgba(0, 0, 0, 0.85);
   color: white;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   z-index: 1000;
@@ -83,7 +83,8 @@ export const Dropdown = styled.div.withConfig({
   border-radius: 8px;
   columns: ${({ itemCount }) => (itemCount > 4 ? 2 : 1)};
   column-gap: 0;
-  border: 0.5px solid rgb(227, 178, 179);
+  border: 0.5px solid rgba(227, 178, 179,0.5);
+  border-top: 0.5px solid rgba(227, 178, 179,0.3);
   border-radius: 4px;
   // column-gap: 25px;
 `;
@@ -159,25 +160,9 @@ export const IntroContainer = styled.div`
 export const HeadingDiv = styled.div`
     display: flex;
     align-items: center;
-    gap: 102px;
+    gap: 40px;
     margin: 0px auto;
-    max-width: 1024px;
-  //   h1 {
-  //   margin: 0px;
-  //   font-family: "PP Formula SemiExtended", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  //   color: rgb(255, 255, 255);
-  //   font-weight: 700;
-  //   font-size: 74px;
-  //   line-height: 1.3;
-  //   letter-spacing: -0.025em;
-  //   background-color: rgb(255, 255, 255);
-  //   background-size: 100%;
-  //   background-repeat: repeat;
-  //   background-clip: text;
-  //   -webkit-text-fill-color: transparent;
-  //   background-image: linear-gradient(55deg, rgb(255, 255, 255) 20%, rgba(245, 192, 192, 0.8) 100%);
-  //  }
-   
+    max-width: 1024px; 
    @media (max-width : 768px) {
      flex-direction: column;
      gap: 26px;
@@ -199,7 +184,7 @@ export const MainHeading = styled.h1`
     -webkit-text-fill-color: transparent;
     background-image: linear-gradient(55deg, rgb(255, 255, 255) 20%, rgba(245, 192, 192, 0.8) 100%);
      @media (max-width : 768px) {
-       font-size: 44px;
+       font-size: 50px;
       line-height: 1.1;
      }
 `;

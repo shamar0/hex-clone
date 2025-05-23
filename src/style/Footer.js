@@ -1,41 +1,44 @@
-'use client';
-import styled from 'styled-components';
-import Grid from '@mui/material/Grid';
+"use client";
+import styled from "styled-components";
+import Grid from "@mui/material/Grid";
 
 export const FooterDiv = styled.footer`
-    margin-bottom: 20px;
-    padding: 50px 80px;
-    margin: 0px auto;
-    border: 1px solid rgba(227, 178, 179, 0.35);
-    width: 85%;
-    max-width: 85%;
-     @media (max-width:768px) {
+  margin-bottom: 20px;
+  padding: 50px 80px;
+  margin: 0px auto;
+  border: 1px solid rgba(227, 178, 179, 0.35);
+  width: 85%;
+  max-width: 85%;
+  background: #181820;
+  @media (max-width: 768px) {
     & > div:first-of-type {
       display: flex;
       flex-direction: column;
       gap: 28px;
     }
-      width: 94%;
-      max-width: 94%;
-      padding: 50px 10px;
-   }
+    width: 94%;
+    max-width: 94%;
+    padding: 50px 10px;
+  }
 `;
 
 export const FooterItem = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 15px;
-    @media (max-width:768px) {
-      align-items: center;
-    }
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+  background: #181820;
+  @media (max-width: 768px) {
+    align-items: center;
+  }
 `;
 
 export const FooterCenter = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  background: #181820;
 `;
 
 export const FooterLinks = styled.div`
@@ -50,29 +53,30 @@ export const FooterLinks = styled.div`
 `;
 
 export const FooterColumn = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-    flex: 1 1 0px;
-    a {
-     color: rgb(245, 192, 192);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  flex: 1 1 0px;
+  a {
+    color: rgb(245, 192, 192);
     text-decoration: none;
     background-color: transparent;
     transition: background-color 0.1s linear;
-     &:hover {
-        text-decoration: underline;
-     }
+    &:hover {
+      text-decoration: underline;
     }
+  }
 `;
 
 export const FooterColTitle = styled.div`
-    font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-    font-size: 12px;
-    font-weight: 700;
-    color: rgb(255, 255, 255);
-    text-transform: uppercase;
-    letter-spacing: 0.7px;
+  font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco,
+    Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 12px;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
 `;
 
 export const FooterRight = styled.div`
@@ -80,7 +84,8 @@ export const FooterRight = styled.div`
   background: transparent;
   border: 1px solid rgba(255, 192, 203, 0.3);
   padding: 5px;
-  @media(max-width: 768px) {
+  background: #181820;
+  @media (max-width: 768px) {
     width: fit-content;
     margin: 0 auto;
   }
@@ -96,28 +101,23 @@ export const Counter = styled.div`
   font-size: 1.5rem;
   width: 24px;
   text-align: center;
-  `;
-
-export const FooterBottom = styled.div`
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    div, a {
-     color: rgba(245, 192, 192, 0.6);
-     text-decoration: none;
-    }
-    a{
-     &:hover {
-        text-decoration: underline;
-     }
-    }
-    @media (max-width:768px) {
-      flex-direction: column;
-    }
 `;
 
-
-
-
-
-    
+export const FooterBottom = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  div,
+  a {
+    color: rgba(245, 192, 192, 0.6);
+    text-decoration: none;
+  }
+  a {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+`;

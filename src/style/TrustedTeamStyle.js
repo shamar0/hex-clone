@@ -31,7 +31,7 @@ export const StyledGrid = styled(Grid)`
 }
 `;
 
-export const StyledBox = styled(Box)`
+export const StyledBox = styled.div`
     padding: 50px 80px;
     width: 85%;
     margin: 0px auto;

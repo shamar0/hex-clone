@@ -27,7 +27,7 @@ export const OverlayButton = styled(Button)`
   font-size: 1rem;
   z-index: 2;
   border: 1px solid rgba(245, 192, 192, 0.25);
-  @media (max-width: 768px){
+  @media (max-width: 768px) {
     padding: 8px;
     font-size: 10px;
   }
@@ -37,17 +37,16 @@ export const ModalContent = styled(Box)`
   position: relative;
   width: 90vw;
   max-width: 1000px;
-  background: #000;
   border-radius: 0px;
   outline: none;
   padding: 16px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 `;
 
 export const StyledDiv = styled.div`
-    display=flex
-    alignItems=center
-    justifyContent=center
-    height=100vh
-    position=relative
+  position: relative;
+  height: 100vh;
 `;
- 

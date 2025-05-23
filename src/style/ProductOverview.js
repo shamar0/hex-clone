@@ -166,7 +166,7 @@ export const OuterDivSection = styled.div`
        & > div:first-of-type {
        max-width: 1024px;
        display: flex;
-       gap:12px;
+       gap:20px;
        margin: 0 auto;
       }
       }

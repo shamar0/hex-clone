@@ -5,7 +5,7 @@ import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 import { StyledBox, StyledGrid } from "@/style/TrustedTeamStyle";
-import { isMobile } from 'react-device-detect';
+import { isMobile } from "react-device-detect";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: "#181820",
@@ -60,7 +60,6 @@ const mobileLogos = [
   { alt: "anthropic" },
 ];
 
-
 export default function FullWidthGrid() {
   return (
     <StyledBox>
@@ -80,21 +79,21 @@ export default function FullWidthGrid() {
         ))}
       </Grid>
 
-       {isMobile && (
-       <Grid container spacing={0}>
-        {mobileLogos.map((logos, idx) => (
-          <StyledGrid
-            className={idx === 3 && "mob-text"}
-            size={{ xs: idx === 3 ? 12 : 4}}
-            key={idx}
-          >
-            <Item sx={{ width: "100%", textAlign: "center" }}>{logos.alt}</Item>
-          </StyledGrid>
-        ))}
-      </Grid>
+      {isMobile && (
+        <Grid container spacing={0}>
+          {mobileLogos.map((logos, idx) => (
+            <StyledGrid
+              className={idx === 3 && "mob-text"}
+              size={{ xs: idx === 3 ? 12 : 4 }}
+              key={idx}
+            >
+              <Item sx={{ width: "100%", textAlign: "center" }}>
+                {logos.alt}
+              </Item>
+            </StyledGrid>
+          ))}
+        </Grid>
       )}
     </StyledBox>
-
-    
   );
 }
